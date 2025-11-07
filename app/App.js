@@ -42,7 +42,7 @@ export default function App() {
           <Button key={n} title={String(n)} onPress={() => handleNumberPress(n)} />
         ))}
       </View>
-      <Button title="Nuevo juego" onPress={newGame} />
+      <Button title="Resetear" onPress={newGame} />
     </SafeAreaView>
   );
 }
@@ -59,5 +59,6 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
     justifyContent: 'center',
     margin: 10,
+    gap: 1,
   },
 });

@@ -1,10 +1,16 @@
-import { View } from "react-native";
-import App from "./App";
+import { useRouter } from "expo-router";
+import { Button, StyleSheet, View } from "react-native";
 
-export default function Index() {
+export default function HomeScreen() {
+  const router = useRouter();
+
   return (
-    <View>
-      <App />
+    <View style={styles.container}>
+      <Button title="Nuevo juego" onPress={() => router.push("/App")} />
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: { flex: 1, justifyContent: "center", alignItems: "center" },
+});
